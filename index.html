@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptocurrencies</title>
+    <link rel="icon" href="./assets/cryptocurrency.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="spinner.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,100&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header parallax">
+        <div class="container">
+            <div class="site-title">cryptocurrencies</div>
+            <div class="nav-bar">
+                <nav class="nav">
+                    <button class="nav-item" id="homeBtn">
+                        Home
+                    </button>
+                    <button class="nav-item" id="reportsBtn">
+                        Live Reports
+                    </button>
+                    <button class="nav-item" id="aboutBtn">
+                        About
+                    </button>
+                </nav>
+                <div class="input-group" id="searchArea">
+                    <input type="text" class="search-input" id="searchInput" placeholder="Enter a currency name"
+                        aria-label="Currency name">
+                    <input type="reset" value="&times;" alt="clear" class="reset-input" id="reset-input" />
+                    <button class="search-button" id="search-button">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <div class="homePage" id="homePage">
+                <div class="cardsContainer" id="cardsContainer">
+                </div>
+            </div>
+            <div class="reportsPage hide" id="reportsPage">
+                <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+            </div>
+            <div class="aboutPage hide" id="aboutPage">
+                <div class="container">
+                    <figure class="figure">
+                        <div class="figure-image">
+                            <img alt="Currency image" class="image">
+                        </div>
+                        <figcaption class="figcaption">
+                            <div class="figcaption-text">
+                                <p class="figcaption-paragraph">
+                                    'Cryptonite' is a web project that allows to get information about cryptocurrencies
+                                    and receive valuable insigts.
+                                </p>
+                                <p class="figcaption-paragraph">
+                                    The interface allows users to follow up to 5 cryptocurrecncies at a time. Detailed
+                                    real-time price update can be viewed in the "Live Reports" tab.
+                                    Select any coin you wish to track by clicking a toggle button that is next to the
+                                    coin name. In case that limit of 5 items is reached you will be offered to remove
+                                    any of chosen ones.
+                                </p>
+                                <p class="figcaption-paragraph">
+                                    Every coin has additional information such as current market price in USD, EUR and
+                                    ILS. Reveal market price info by hitting "Show more" button.
+                                </p>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer footer-parallax">
+        <div class="container">
+            <div class="footer-content">
+                <h4>Inspired by <b><a href="https://www.johnbryce.co.il/" target="_blank">JOHN BRYCE</a></b></h4>
+            </div>
+            <div>
+                <a href="https://www.johnbryce.co.il/" target="_blank">
+                    <img src="./assets/jbh_small.jpeg" alt="John Bryce logo" class="jb-logo">
+                </a>
+            </div>
+            <div class="copyright">
+                <small class="copyright-title">Data provided by <b><a href="https://www.coingecko.com/en" target="_blank">CoinGecko</a></b>
+                     & <b><a href="https://min-api.cryptocompare.com/" target="_blank">CryptoCompare</a></b></small>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal hide" id="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Favorite coins</h5>
+                    <p class="modal-subtitle">You can choose up to 5 coins to follow up.<br>
+                        Please remove any item if you wish to select another one</p>
+                    <div class="modal__close" data-close>&times;</div>
+                </div>
+                <div class="modal-body">
+                    <ol class="list-group" id="list-group">
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button class="modal-button" id="close">Close</button>
+                    <button class="modal-button" id="save">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="spinner hide" id="spinner">
+        <div class="spinner-dialog">
+            <div class="loadingio-spinner-spinner-jeh0qkvafm">
+                <div class="ldio-bh322cwryq">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
