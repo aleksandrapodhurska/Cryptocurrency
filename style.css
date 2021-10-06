@@ -37,6 +37,7 @@ body {
     height: 250px;
     flex: 0 0 auto;
     border-bottom: var(--border);
+    padding: 0 1rem;
 }
 
 header .container {
@@ -63,6 +64,8 @@ header .container {
     letter-spacing: .5rem;
     color: var(--white);
 }
+
+
 
 .nav-bar {
     width: 100%;
@@ -142,7 +145,7 @@ header .container {
 .main {
     flex: 1 0 auto;
     background-color: var(--white);
-    padding: 1rem 0;
+    padding: 1rem;
 }
 
 .cardsContainer {
@@ -362,7 +365,6 @@ input:checked+.slider:before {
     padding: 1rem;
     width: 100%;
     max-height: 80vh;
-    border-radius: 10px;
     background-color: var(--white);
     border-radius: 10px;
     filter: drop-shadow(0px 0px 8px var(--primary-dark-blue));
@@ -416,6 +418,10 @@ input:checked+.slider:before {
 
 .list-item:hover {
     background-color: var(--primary-light-blue);
+}
+
+.itemTitle {
+    flex: 6;
 }
 
 .modal-footer {
@@ -536,4 +542,20 @@ footer .container {
 
 .figcaption-paragraph:last-child {
     margin-bottom: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .site-title {
+        font-size: 1.5em;
+    }
+    .nav-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1px;
+    }
+
+    .modal-dialog {
+        max-width: 300px;
+        font-size: 2rem;
+    }
 }
